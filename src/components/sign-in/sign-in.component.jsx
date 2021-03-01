@@ -14,20 +14,20 @@ class SighIn extends React.Component{
         this.state = {
             email: '',
             password: ''
-        }
+        };
     }
 
     handleSubmit = event => {
       event.preventDefault();
 
       this.setState({ email: '', password: '' })
-    }
+    };
 
     handleChange= event => {
         const { value, name } = event.target;
 
         this.setState({ [name]: value })
-    }
+    };
 
 render() {
     return(
@@ -47,7 +47,7 @@ render() {
                  <FormInput 
                  name='password'
                  type='password' 
-                 value={this.state.email}
+                 value={this.state.password}
                  handleChange={this.handleChange} 
                  label='password'
                  required 
@@ -55,7 +55,7 @@ render() {
                 <div className='buttons'>
                  <CustomButton type='submit'>Sign in</CustomButton>
                  <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-                      {' '}Sign in with Google {' '}
+                      Sign in with Google 
                       </CustomButton>
                       </div>
              </form>
